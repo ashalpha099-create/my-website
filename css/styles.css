@@ -1,27 +1,66 @@
-body {
-    background: #f5f5f5;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    margin: 0;
+:root{
+  --bg:#f4f5f7;
+  --card:#fff;
+  --accent:#0b6efd;
+  --text:#111;
+  --muted:#666;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,Segoe UI,Roboto,Arial;line-height:1.5;background:var(--bg);color:var(--text)}
+.container{max-width:980px;margin:0 auto;padding:18px}
 
-header {
-    text-align: center;
-    background: #222;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+.site-header{background:#0f1724;color:#fff}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px}
+.brand h1{font-size:1.15rem;margin-bottom:2px}
+.tag{font-size:0.8rem;opacity:0.85}
+
+.nav a{color:rgba(255,255,255,0.95);text-decoration:none;margin-left:12px;font-size:0.95rem}
+.nav a:hover{text-decoration:underline}
+
+/* HERO */
+.hero{padding:36px 0;background:linear-gradient(0deg,#111 0%, #2229 100%);color:#fff;text-align:center}
+.hero-inner{max-width:820px;margin:0 auto}
+.hero h2{font-size:1.6rem;margin-bottom:8px}
+.hero p{opacity:0.95;margin-bottom:14px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;margin-right:8px}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.15)}
+.hero-cta .btn{margin-top:6px}
+
+/* SECTIONS */
+.section{padding:26px 0}
+.alt{background:transparent}
+
+/* cards */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 14px rgba(12,12,20,0.06)}
+.card-media{font-size:28px;margin-bottom:8px}
+.card h4{margin-bottom:6px}
+.link{color:var(--accent);text-decoration:none;font-weight:600}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.service{background:var(--card);padding:12px;border-radius:8px;box-shadow:0 6px 14px rgba(12,12,20,0.04)}
+.service h4{margin-bottom:6px;font-size:1rem}
+
+/* grid projects */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.project{background:var(--card);padding:12px;border-radius:8px}
+.proj-thumb{height:90px;background:#eee;border-radius:6px;margin-bottom:10px;display:flex;align-items:center;justify-content:center;color:#999}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.contact-card{background:var(--card);padding:12px;border-radius:8px}
+
+.muted{color:var(--muted);font-size:0.95rem}
+.small{font-size:0.9rem;color:var(--muted);margin-top:10px}
+
+/* footer */
+.site-footer{padding:22px 0;text-align:center;color:var(--muted);font-size:0.95rem}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .nav{display:flex;flex-wrap:wrap;gap:6px}
+  .cards,.grid,.services,.contact-grid{grid-template-columns:1fr}
+  .hero h2{font-size:1.4rem}
 }
-
-section {
-    margin-top: 20px;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    color: #555;
-  }
