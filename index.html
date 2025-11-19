@@ -1,25 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Gaming & Business Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>YourName</h1>
+        <p class="tag">Gamer • Streamer • Business Creator</p>
+      </div>
+      <nav class="nav">
+        <a href="#gaming">Gaming</a>
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-
-    <section>
-        <h2>About Me</h2>
-        <p>This is my first website built using HTML and CSS, hosted on GitHub Pages.</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h2>Level Up — Play & Build</h2>
+        <p>I combine gaming creativity with practical business solutions: streaming, content, and digital services.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#projects">See Projects</a>
+          <a class="btn ghost" href="#contact">Hire / Collab</a>
+        </div>
+      </div>
     </section>
 
-    <footer>
-        <p>© 2025 My Website</p>
-    </footer>
+    <section id="gaming" class="container section">
+      <h3>Gaming Highlights</h3>
+      <p class="muted">Streams • Clips • Achievements</p>
+      <div class="cards">
+        <article class="card">
+          <div class="card-media">🎮</div>
+          <h4>Top Clips</h4>
+          <p>Short highlight reels from my best games — uploads on YouTube / Twitch.</p>
+          <a href="#" class="link">Watch clips</a>
+        </article>
 
+        <article class="card">
+          <div class="card-media">🏆</div>
+          <h4>Achievements</h4>
+          <p>Ranked top X in [game], tournament runner-up, and consistent weekly top-performer.</p>
+          <a href="#" class="link">See details</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="container section alt">
+      <h3>Business & Services</h3>
+      <p class="muted">What I offer</p>
+      <div class="services">
+        <div class="service">
+          <h4>Content Creation</h4>
+          <p>Stream setups, video editing & social clips to grow your channel.</p>
+        </div>
+        <div class="service">
+          <h4>Web & Branding</h4>
+          <p>Small business websites, landing pages and brand identity design.</p>
+        </div>
+        <div class="service">
+          <h4>Consulting</h4>
+          <p>Monetization strategy, sponsorship outreach, and audience growth plans.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="container section">
+      <h3>Projects</h3>
+      <p class="muted">A few recent works</p>
+      <div class="grid">
+        <div class="project">
+          <div class="proj-thumb">IMG</div>
+          <h4>Game Series Hub</h4>
+          <p>Website & content hub for a competitive team.</p>
+          <a href="#" class="link">View</a>
+        </div>
+        <div class="project">
+          <div class="proj-thumb">IMG</div>
+          <h4>Brand Refresh</h4>
+          <p>Logo + visuals for a local business.</p>
+          <a href="#" class="link">View</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section alt">
+      <h3>Contact</h3>
+      <p class="muted">Work with me — collab, coaching, or business inquiries</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h4>Email</h4>
+          <p><a href="mailto:yourname@example.com">yourname@example.com</a></p>
+        </div>
+        <div class="contact-card">
+          <h4>Social</h4>
+          <p>
+            <a href="#" target="_blank">Twitch</a> •
+            <a href="#" target="_blank">YouTube</a> •
+            <a href="#" target="_blank">Instagram</a>
+          </p>
+        </div>
+      </div>
+
+      <p class="small">Or DM me on social for quick chat.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="yr"></span> YourName — Gaming & Business</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
 </body>
-</html>
+    </html>
